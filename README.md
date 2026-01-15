@@ -1,23 +1,43 @@
-# Hi ！ here is sukasukasuka123 ✋🤓
+# 👋 Hi, I'm sukasukasuka123
 
-**Go 后端 / 系统方向开发者**
-专注 **高并发资源管理、分布式通信机制与系统抽象设计**
+**Go 后端 / 系统方向忠实的学徒**
+关注 **高并发资源管理、分布式通信机制，以及复杂系统的可用性设计**
 
-> Interested in how systems behave under pressure, not just how they work in demos.
+> I care not only about how systems work,
+> but how they behave when things go wrong —
+> and how to make them usable for humans.
 
 ---
 
 ## 🧠 技术画像 | Technical Profile
 
-* **主力语言**：Go
-* **核心能力**：
+**主力语言**：Go
+**技术取向**：系统工程 / 高并发 / 工具化
 
-  * 高并发编程（Goroutine / Channel / CAS）
-  * 资源池与连接池抽象设计
-  * 分布式系统通信模型（Gossip）
-  * 系统可扩展性与失败场景分析
-* **关注重点**：
-  系统在 *高负载、资源竞争、不可靠网络* 下的行为
+**核心能力**
+
+* 高并发编程（Goroutine / Channel / CAS）
+* 资源池、连接池等系统级抽象设计
+* 分布式通信机制（Gossip、去中心化传播）
+* 系统可扩展性、失败场景与压力行为分析
+
+**工程习惯**
+
+* 先建抽象，再写实现
+* 对边界条件、退化路径保持警惕
+* 不满足于“能跑”，更关心“长期是否稳定”
+
+---
+
+## 🧩 我如何看待系统 | How I Think About Systems
+
+我关注的不是“功能是否完成”，而是：
+
+* 资源在高并发下是如何被争用的
+* 压力是如何在系统中扩散和放大的
+* 错误是否会被隔离，还是连锁崩溃
+
+比起 Demo，更关心系统在第 **10 万次请求** 时的状态。
 
 ---
 
@@ -25,19 +45,23 @@
 
 ### **TemplatePoolByGO**
 
-> **通用弹性资源池实现（生产级设计取向）**
+**通用弹性资源池（生产级设计取向）**
 
 * 技术栈：Go
-* 核心问题：
-  **如何在高并发场景下安全、可控地管理有限资源**
-* 关键设计：
+* 解决问题：
+  如何在高并发场景下**安全、可控地管理有限资源**
 
-  * 动态扩容 / 缩容（基于压力与使用率）
-  * 超时等待与限流，避免雪崩
-  * 资源生命周期建模（Create / Update / Expire）
-  * 基于 CAS + Channel 的非阻塞调度
-* 适用场景：
-  数据库连接池、RPC 客户端池、外部服务资源池
+**关键设计**
+
+* 动态扩容 / 缩容（基于压力与使用率）
+* 超时等待与限流，避免雪崩
+* 资源生命周期建模（Create / Use / Expire）
+* CAS + Channel 的非阻塞调度模型
+
+**典型应用**
+
+* 数据库连接池
+* RPC / 外部服务客户端池
 
 🔗 [https://github.com/sukasukasuka123/TemplatePoolByGO](https://github.com/sukasukasuka123/TemplatePoolByGO)
 
@@ -45,67 +69,75 @@
 
 ### **Gossip**
 
-> **Go 实现的分布式 Gossip 协议（偏系统实验）**
+**分布式 Gossip 协议实验实现**
 
 * 技术栈：Go
 * 关注点：
 
   * 节点发现与状态传播
   * Fanout 控制与传播效率
-  * 网络不稳定情况下的信息一致性
-  * 数据分块和超时重传
-* 设计目标：
-  探索 **去中心化通信模型** 在真实约束下的行为特征
+  * 不可靠网络下的信息一致性
+  * 数据分块与超时重传
+
+目标不是“实现协议”，
+而是理解**去中心化通信在真实约束下的行为模式**。
 
 🔗 [https://github.com/sukasukasuka123/Gossip](https://github.com/sukasukasuka123/Gossip)
 
 ---
 
-### **YuanXinAvatarMan**
+## 🛠️ 工具与界面 | Tools & GUI Applications
 
-> **RAG 驱动的 AI 应用 Demo（工程整合方向）**
+> 我习惯把复杂系统能力，封装成**可以直接使用的工具和界面**。
 
-* 技术栈：JavaScript / Python
-* 内容：
+### **hardhat_helper**
 
-  * RAG 流程整合
-  * 向量检索 + 生成模型协同
-* 定位：
-  偏 **系统整合与工程实践**，非模型训练本身
+**Hardhat 合约部署可视化工具**
 
-🔗 [https://github.com/sukasukasuka123/YuanXinAvatarMan](https://github.com/sukasukasuka123/YuanXinAvatarMan)
+* 技术栈：Python
+* 特点：
 
----
+  * 图形化界面，简化部署流程
+  * 一键部署、参数可视化
+  * 与脚手架工具深度集成
 
-## 🧩 系统设计取向 | How I Think About Systems
+定位：
+**降低系统操作门槛，让复杂流程“点得动、用得稳”**
 
-* 倾向 **先建抽象，再谈实现**
-* 关注：
-
-  * 资源是如何被争用的
-  * 压力是如何扩散的
-  * 错误是如何被放大的
-* 对“看起来能跑”的系统保持警惕
-  更关心它在第 10 万次请求时会发生什么
+🔗 [https://github.com/sukasukasuka123/hardhat_helper](https://github.com/sukasukasuka123/hardhat_helper)
 
 ---
 
-## ✍️ 思考与记录 | Notes & Essays
+### **test_helper**
 
-* 技术设计随笔
-* 系统抽象与人类行为的类比
-* 对工程妥协、复杂性与边界条件的反思
+**面试流程与题库管理工具**
 
-🔗 [https://github.com/sukasukasuka123/-](https://github.com/sukasukasuka123/-)
+* 技术栈：Python
+* 功能：
+
+  * 按类型与难度随机抽题
+  * 面试过程完整记录
+  * 数据可回溯
+
+定位：
+将原本“靠人记”的流程，
+变成**可复用、可统计的系统**。
+
+🔗 [https://github.com/sukasukasuka123/test_helper](https://github.com/sukasukasuka123/test_helper)
+
+---
+
+## 🧠 工程取向总结
+
+* 能写系统
+* 能扛并发
+* 也能把系统**做成别人愿意用的工具**
 
 ---
 
 ## 📫 Contact
 
 * GitHub: [https://github.com/sukasukasuka123](https://github.com/sukasukasuka123)
-* email:[redred55@qq.com](redred55@qq.com)
-* 讨论与交流：Issues / Discussions
+* Email: [redred55@qq.com](mailto:redred55@qq.com)
 
 ---
-
-> I prefer building fewer things, but understanding them deeply.
