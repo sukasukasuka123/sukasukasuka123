@@ -102,6 +102,7 @@
 ## 📫 Contact
 
 * GitHub: [https://github.com/sukasukasuka123](https://github.com/sukasukasuka123)
+* email:[redred55@qq.com](redred55@qq.com)
 * 讨论与交流：Issues / Discussions
 
 ---
