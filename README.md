@@ -155,6 +155,22 @@ Conn[T] Interface：定义资源的 Create / Reset / Close / Ping 方法
 🔗 [https://github.com/sukasukasuka123/test_helper](https://github.com/sukasukasuka123/test_helper)
 
 ---
+### **xunfei_rag_uploader**
+
+**图形化上传文件到讯飞rag的工具**
+
+* 技术栈：Python
+* 特点：
+
+  * 图形化界面，简化上传流程，且不用考虑加密过程等
+  * 一键部署、有详细的日志界面
+
+定位：
+**降低操作门槛，让流程“点得动、用得稳”**
+
+🔗 [https://github.com/sukasukasuka123/xunfei_rag_uploader](https://github.com/sukasukasuka123/xunfei_rag_uploader)
+
+---
 
 ## 🧠 工程取向总结
 
