@@ -1,188 +1,94 @@
-# 👋 Hi, I'm sukasukasuka123
+# sukasukasuka123
 
-**Go 后端 / 系统方向忠实的学徒**
-关注 **高并发资源管理、分布式通信机制，以及复杂系统的可用性设计**
+Go 后端 / 系统方向
 
-> I care not only about how systems work,
-> but how they behave when things go wrong —
-> and how to make them usable for humans.
+关注：高并发资源管理、分布式通信机制、系统可用性设计
 
 ---
 
-## 🧠 技术画像 | Technical Profile
+## 技术栈
 
-**主力语言**：Go
-**技术取向**：系统工程 / 高并发 / 工具化
+**语言**：Go、Python
 
-**核心能力**
-
-* 高并发编程（Goroutine / Channel / CAS）
-* 资源池、连接池等系统级抽象设计
-* 分布式通信机制（Gossip、去中心化传播）
-* 系统可扩展性、失败场景与压力行为分析
-
-**工程习惯**
-
-* 先建抽象，再写实现
-* 对边界条件、退化路径保持警惕
-* 不满足于“能跑”，更关心“长期是否稳定”
+**方向**：
+- 高并发编程（Goroutine / Channel / CAS）
+- 资源池与连接池设计
+- 分布式通信（Gossip / 去中心化）
+- 系统边界条件与失败场景处理
 
 ---
 
-## 🧩 我如何看待系统 | How I Think About Systems
+## 核心项目
 
-我关注的不是“功能是否完成”，而是：
+### [TemplatePoolByGO](https://github.com/sukasukasuka123/TemplatePoolByGO)
 
-* 资源在高并发下是如何被争用的
-* 压力是如何在系统中扩散和放大的
-* 错误是否会被隔离，还是连锁崩溃
+**通用弹性资源池**
 
-比起 Demo，更关心系统在第 **10 万次请求** 时的状态。
+解决问题：高并发下安全管理有限资源，避免死锁、雪崩、资源浪费
 
----
+**技术实现**：
+- 泛型设计支持任意资源类型（DB / Redis / RPC 客户端）
+- 快速路径无锁获取，慢路径动态创建
+- Actor 模型管理状态，线程安全
+- 自动重连与健康检查
 
-## 🚀 核心项目 | Selected Projects
-TemplatePoolByGO
-
-通用弹性资源池（生产级设计）
-
-技术栈：Go
-
-目标：在高并发场景下安全、可控地管理有限资源
-
-核心问题：如何在资源有限的情况下避免死锁、雪崩和资源浪费
-
-核心特性
-
-泛型设计：支持任意类型资源（MySQL、Redis、RPC 客户端等）
-
-动态弹性：根据负载自动扩容/缩容
-
-Actor 模型：基于闭包/Actor 的线程安全状态管理
-
-自动重连：失效资源可自动重连，保障可用性
-
-高性能：快速路径无锁获取资源，慢路径动态创建
-
-架构设计
-核心组件
-
-Pool[T]：资源池主体，负责获取、归还、生命周期管理
-
-PoolManagerActor：Actor 模型管理器，负责扩缩容和监控
-
-Conn[T] Interface：定义资源的 Create / Reset / Close / Ping 方法
-
-工作原理
-
-快速路径：直接从 channel 获取空闲资源，无锁设计
-
-慢路径：资源不足时，通过轮询等待或动态创建新资源
-
-扩缩容策略：
-
-使用率 < 20% → 小步快速扩容
-
+**扩缩容策略**：
+```
+使用率 < 20%  → 快速扩容
 20% ≤ 使用率 < 70% → 按比例扩容
+使用率 ≥ 70% → 保守扩容
+```
 
-使用率 ≥ 70% → 保守扩容，避免浪费
-
-**典型应用**
-
-* 数据库连接池
-* RPC / 外部服务客户端池
-
-🔗 [https://github.com/sukasukasuka123/TemplatePoolByGO](https://github.com/sukasukasuka123/TemplatePoolByGO)
+**架构**：
+- `Pool[T]`：资源获取/归还/生命周期
+- `PoolManagerActor`：扩缩容/监控
+- `Conn[T]`：Create / Reset / Close / Ping 接口
 
 ---
 
-### **Gossip**
+### [Gossip](https://github.com/sukasukasuka123/Gossip)
 
-**分布式 Gossip 协议实验实现**
+**分布式 Gossip 协议实现**
 
-* 技术栈：Go
-* 关注点：
+**研究点**：
+- 节点发现与状态传播
+- Fanout 控制与传播效率
+- 不可靠网络下的一致性保证
+- 数据分块与超时重传
 
-  * 节点发现与状态传播
-  * Fanout 控制与传播效率
-  * 不可靠网络下的信息一致性
-  * 数据分块与超时重传
-
-目标不是“实现协议”，
-而是理解**去中心化通信在真实约束下的行为模式**。
-
-🔗 [https://github.com/sukasukasuka123/Gossip](https://github.com/sukasukasuka123/Gossip)
+目标：理解去中心化通信在真实约束下的行为
 
 ---
 
-## 🛠️ 工具与界面 | Tools & GUI Applications
+## 工具项目
 
-> 我习惯把复杂系统能力，封装成**可以直接使用的工具和界面**。
+### [hardhat_helper](https://github.com/sukasukasuka123/hardhat_helper)
+智能合约部署可视化工具（Python）
+- 图形化部署流程
+- 一键部署 + 参数可视化
 
-### **hardhat_helper**
+### [test_helper](https://github.com/sukasukasuka123/test_helper)
+面试流程管理工具（Python）
+- 按类型/难度随机抽题
+- 面试记录 + 数据回溯
 
-**Hardhat 合约部署可视化工具**
-
-* 技术栈：Python
-* 特点：
-
-  * 图形化界面，简化部署流程
-  * 一键部署、参数可视化
-  * 与脚手架工具深度集成
-
-定位：
-**降低系统操作门槛，让复杂流程“点得动、用得稳”**
-
-🔗 [https://github.com/sukasukasuka123/hardhat_helper](https://github.com/sukasukasuka123/hardhat_helper)
+### [xunfei_rag_uploader](https://github.com/sukasukasuka123/xunfei_rag_uploader)
+讯飞 RAG 文件上传工具（Python）
+- 图形化界面 + 详细日志
+- 自动处理加密流程
 
 ---
 
-### **test_helper**
+## 工程方法
 
-**面试流程与题库管理工具**
-
-* 技术栈：Python
-* 功能：
-
-  * 按类型与难度随机抽题
-  * 面试过程完整记录
-  * 数据可回溯
-
-定位：
-将原本“靠人记”的流程，
-变成**可复用、可统计的系统**。
-
-🔗 [https://github.com/sukasukasuka123/test_helper](https://github.com/sukasukasuka123/test_helper)
-
----
-### **xunfei_rag_uploader**
-
-**图形化上传文件到讯飞rag的工具**
-
-* 技术栈：Python
-* 特点：
-
-  * 图形化界面，简化上传流程，且不用考虑加密过程等
-  * 一键部署、有详细的日志界面
-
-定位：
-**降低操作门槛，让流程“点得动、用得稳”**
-
-🔗 [https://github.com/sukasukasuka123/xunfei_rag_uploader](https://github.com/sukasukasuka123/xunfei_rag_uploader)
+- 先抽象后实现
+- 关注边界条件与退化路径
+- 测试系统在第 10 万次请求时的行为
+- 将复杂系统封装为可用工具
 
 ---
 
-## 🧠 工程取向总结
+## 联系方式
 
-* 能写系统
-* 能扛并发
-* 也能把系统**做成别人愿意用的工具**
-
----
-
-## 📫 Contact
-
-* GitHub: [https://github.com/sukasukasuka123](https://github.com/sukasukasuka123)
-* Email: [redred55@qq.com](mailto:redred55@qq.com)
-
----
+GitHub: [sukasukasuka123](https://github.com/sukasukasuka123)  
+Email: redred55@qq.com
