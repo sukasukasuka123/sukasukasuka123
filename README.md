@@ -4,7 +4,7 @@
 
 <br/>
 
-[![followers](https://img.shields.io/github/followers/sukasukasuka123?style=flat-square&logo=github&label=followers&color=185FA5)](https://github.com/sukasukasuka123?tab=followers)
+[![followers](https://img.shields.io/github/followers/RedHuang-0622?style=flat-square&logo=github&label=followers&color=185FA5)](https://github.com/RedHuang-0622?tab=followers)
 &nbsp;
 [![X](https://img.shields.io/badge/@Red1933432-000000?style=flat-square&logo=x)](https://x.com/Red1933432)
 &nbsp;
@@ -34,44 +34,44 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/sukasukasuka123/Seele">Seele</a> &nbsp;⭐ 3</h3>
+      <h3><a href="https://github.com/RedHuang-0622/Seele">Seele</a> &nbsp;⭐ 3</h3>
       <p>Go Agent 框架，支持 MCP Server 接入、Hub Skill（gRPC）、多轮对话与流式响应。分层架构：LLM / Runtime / Provider 完全解耦。</p>
       <img src="https://img.shields.io/badge/Go-185FA5?style=flat-square&logo=go&logoColor=white"/>
-      <img src="https://img.shields.io/github/last-commit/sukasukasuka123/Seele?style=flat-square&color=444441"/>
+      <img src="https://img.shields.io/github/last-commit/RedHuang-0622/Seele?style=flat-square&color=444441"/>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/sukasukasuka123/TemplatePoolByGO">TemplatePoolByGO</a> &nbsp;⭐ 1</h3>
+      <h3><a href="https://github.com/RedHuang-0622/TemplatePoolByGO">TemplatePoolByGO</a> &nbsp;⭐ 1</h3>
       <p>泛型弹性资源池。无锁快速路径 + Actor 状态管理，自适应扩缩容算法，抑制惊群效应。支持 TTL、活性探测、背压控制。</p>
       <img src="https://img.shields.io/badge/Go-185FA5?style=flat-square&logo=go&logoColor=white"/>
-      <img src="https://img.shields.io/github/last-commit/sukasukasuka123/TemplatePoolByGO?style=flat-square&color=444441"/>
+      <img src="https://img.shields.io/github/last-commit/RedHuang-0622/TemplatePoolByGO?style=flat-square&color=444441"/>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/sukasukasuka123/Gossip">Gossip</a></h3>
+      <h3><a href="https://github.com/RedHuang-0622/Gossip">Gossip</a></h3>
       <p>分布式 Gossip 协议实现。研究节点发现、Fanout 控制、不可靠网络下的最终一致性与分块超时重传。</p>
       <img src="https://img.shields.io/badge/Go-185FA5?style=flat-square&logo=go&logoColor=white"/>
-      <img src="https://img.shields.io/github/last-commit/sukasukasuka123/Gossip?style=flat-square&color=444441"/>
+      <img src="https://img.shields.io/github/last-commit/RedHuang-0622/Gossip?style=flat-square&color=444441"/>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/sukasukasuka123/ClearestFramePicker">ClearestFramePicker</a> &nbsp;⭐ 2</h3>
+      <h3><a href="https://github.com/RedHuang-0622/ClearestFramePicker">ClearestFramePicker</a> &nbsp;⭐ 2</h3>
       <p>从视频中自动提取最清晰帧。起因是拍月亮时帧数太多，手动挑太累了 🌙</p>
       <img src="https://img.shields.io/badge/Python-3B6D11?style=flat-square&logo=python&logoColor=white"/>
-      <img src="https://img.shields.io/github/last-commit/sukasukasuka123/ClearestFramePicker?style=flat-square&color=444441"/>
+      <img src="https://img.shields.io/github/last-commit/RedHuang-0622/ClearestFramePicker?style=flat-square&color=444441"/>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/sukasukasuka123/NetUtil">NetUtil</a> &nbsp;⭐ 2</h3>
+      <h3><a href="https://github.com/RedHuang-0622/NetUtil">NetUtil</a> &nbsp;⭐ 2</h3>
       <p>Go 网络工具库。封装常用网络操作，供其他项目复用。</p>
       <img src="https://img.shields.io/badge/Go-185FA5?style=flat-square&logo=go&logoColor=white"/>
-      <img src="https://img.shields.io/github/last-commit/sukasukasuka123/NetUtil?style=flat-square&color=444441"/>
+      <img src="https://img.shields.io/github/last-commit/RedHuang-0622/NetUtil?style=flat-square&color=444441"/>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/sukasukasuka123/microHub">microHub</a> &nbsp;⭐ 1</h3>
+      <h3><a href="https://github.com/RedHuang-0622/microHub">microHub</a> &nbsp;⭐ 1</h3>
       <p>微服务 Hub，为 Seele 框架提供 gRPC Skill 路由能力。</p>
       <img src="https://img.shields.io/badge/Go-185FA5?style=flat-square&logo=go&logoColor=white"/>
-      <img src="https://img.shields.io/github/last-commit/sukasukasuka123/microHub?style=flat-square&color=444441"/>
+      <img src="https://img.shields.io/github/last-commit/RedHuang-0622/microHub?style=flat-square&color=444441"/>
     </td>
   </tr>
 </table>
@@ -85,9 +85,9 @@
 
 | 项目 | 描述 | 语言 |
 |------|------|------|
-| [hardhat_helper](https://github.com/sukasukasuka123/hardhat_helper) | 智能合约可视化部署工具，一键部署 + 参数展示 | Python |
-| [test_helper](https://github.com/sukasukasuka123/test_helper) | 面试流程管理：随机抽题 + 回溯记录 | — |
-| [xunfei_rag_uploader](https://github.com/sukasukasuka123/xunfei_rag_uploader) | 讯飞 RAG 图形化上传，自动处理加密流程 | Python |
+| [hardhat_helper](https://github.com/RedHuang-0622/hardhat_helper) | 智能合约可视化部署工具，一键部署 + 参数展示 | Python |
+| [test_helper](https://github.com/RedHuang-0622/test_helper) | 面试流程管理：随机抽题 + 回溯记录 | — |
+| [xunfei_rag_uploader](https://github.com/RedHuang-0622/xunfei_rag_uploader) | 讯飞 RAG 图形化上传，自动处理加密流程 | Python |
 
 </details>
 
@@ -103,13 +103,13 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=sukasukasuka123&show_icons=true&hide_border=true&theme=default&hide_rank=false&include_all_commits=true" height="150"/>
+<img src="https://github-readme-stats.vercel.app/api?username=RedHuang-0622&show_icons=true&hide_border=true&theme=default&hide_rank=false&include_all_commits=true" height="150"/>
 &nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sukasukasuka123&layout=compact&hide_border=true&theme=default" height="150"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RedHuang-0622&layout=compact&hide_border=true&theme=default" height="150"/>
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=sukasukasuka123&theme=minimal&hide_border=true&area=true&color=185FA5&line=185FA5&point=0C447C" width="95%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=RedHuang-0622&theme=minimal&hide_border=true&area=true&color=185FA5&line=185FA5&point=0C447C" width="95%"/>
 
 </div>
 
